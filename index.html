@@ -66,7 +66,7 @@
                             <a class="page-scroll" href="#contact">Contact</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="developer.foodai.org">Developer</a>
+                            <a class="page-scroll" href="http://developer.foodai.org">Developer</a>
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
@@ -88,8 +88,8 @@
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
                             <h1 class="brand-heading">Food<span class="extra-light color-4f">Ai </span></h1>
-                            <p class="intro-text text-upper">Smart Food Recognition</p>
-                            <p class="text-capital">with the State-of-the-art Visual Recognition Technology</p>
+                            <p class="">Smart Food Recognition <br>
+                                with the State-of-the-art Visual Recognition Technology</p>
                             <a href="#demo" class="btn btn-circle btn-round page-scroll">
                                 <i class="fa fa-angle-double-down animated"></i>
                             </a>
@@ -104,89 +104,78 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2>About FOODAi</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum iste tenetur quasi ex modi exercitationem, beatae <a href="http://www.stevenhoi.org">deserunt</a> eaque magni esse eveniet itaque ducimus asperiores iusto. Minus molestiae reprehenderit doloremque ipsam?</p>
-                    <p>Quia ratione, natus <a href="http://www.stevenhoi.org">voluptas</a> voluptate accusamus ipsam harum. Odit, esse architecto reiciendis autem amet id voluptas vero reprehenderit, repellendus fuga ducimus corporis?</p>
+                    <p>FoodAI offers the cutting-edge online and API services for food image recognition using state-of-the-art visual recognition technologies. FoodAI is developed by the R&amp;D team lead <!--a href="http://www.stevenhoi.org"-->Prof Steven HOI</a> at the School of Information Systems (SIS), Singapore Management University (SMU), Singapore.</p>
 
+            </div>
+        </div>
+    </section>
+
+<!-- Demo Section -->
+<section id="demo-sec" class="content-section text-center">
+    <div class="download-section">
+       <p  id="demo"></p><br>
+       <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h1>Try out our service</h1>
+                    <p>Try out our demo below or visit our developer portal for our API services.</p>
+                    <!--                    <a href="http://developer.foodai.org" class="btn btn-default btn-lg">Visit Developer Page</a>-->
                 </div>
             </div>
-        </section>
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-0" id="submit-img">
+                    <h4>Upload image</h4>
+                    <label class="" for="upload-files"></label>
+                    <button class="btn btn-default" onclick="$('#upload-files').click();">Choose a file</button>
+                    <div class="hidden"><input type="file" id="upload-files" name="userfile" required="true" hidden="true"/></div>
+                </div>
 
-        <!-- Demo Section -->
-        <section id="demo" class="content-section text-center">
-            <div class="download-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <h1>Try out out service</h1>
-                            <p>You can try out our service below or just visit our developer portal for a technical overview.</p>
-                            <!--                    <a href="http://developer.foodai.org" class="btn btn-default btn-lg">Visit Developer Page</a>-->
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6 col-sm-offset-3" id="submit-img">
-                            <h4>Upload image</h4>
-                            <label class="" for="upload-files"></label>
-                            <button class="btn btn-default" onclick="$('#upload-files').click();">Choose a file</button>
-                            <div class="hidden">
-                                <input type="file" id="upload-files" name="userfile" required="true" hidden="true"/>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6 col-sm-offset-3">
-                            <h4>Enter image URL</h4>
-                            <label class="" for="image_url"></label>
-                            <div class="form-group navbar-form">
-                                <input name="urllink" type="text" id="image_url"
-                                       placeholder="http://example.com/a.jpg" class="form-control form-inline" required="true" style="">
-                                <button class="btn btn-default" id="upload-btn-0" name="upload-classify" class="" value="">Go!</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div id="" class="progress-bar progress-bar-striped" style="width: 77%"></div> -->
-                    <div class="row">
-                        <div id="progbar" class="progress-bar progress-bar-striped active">
-                            <div class="progwrap">
-                                <!--                                <div class="progbar-percentage" data-percentage="100"></div>-->
-                                <div class="progbar-container">
-                                    <div class="progbar"></div>
-                                </div>
-                            </div>
+                <div class="col-sm-6 col-sm-offset-0">
+                    <h4>Enter image URL</h4>
+                    <label for="image_url"></label>
+                       <div class="row">
+                           <div class="col-xs-9"><input name="urllink" type="text" id="image_url" placeholder="http://example.com/a.jpg" class="form-control" required="true" style="postion"></div>
+                           <div class="col-xs-1"><button class="btn btn-default" id="upload-btn-0" name="upload-classify" class="" value="">Go!</button></div>
+                       </div>
+                </div>
+            </div>
+            <div id="upload-bar" class="progress-bar progress-bar-striped" style="width: 0%">&nbsp;</div>
+            <div class="row">
+                <div id="progbar" class="progress-bar progress-bar-striped active">
+                    <div class="progwrap">
+                        <div class="progbar-percentage progress-bar progress-bar-striped" style="width: 77%" data-percentage="100"></div>
+                        <div class="progbar-container">
+                            <div class="progbar"></div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <section>
-            <div class="row col-sm-10 col-sm-offset-1">
-                <div class="col-sm-5">
-                    <a href="#" id="show_url" style="vertical-align: middle">
-                        <div id="image" hidden="true">
-                            <img src="#" id="show" style="width: 100%; vertical-align: middle"/>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-sm-7">
-                    <div id="predict">
-                        <!--
 
+        <div class="row col-sm-10 col-sm-offset-1">
+            <div class="col-sm-6">
+                <a href="#" id="show_url" style="vertical-align: middle">
+                    <div id="image" hidden="true">
+                        <img src="#" id="show" style="width: 100%; vertical-align: middle"/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6">
+                <div id="predict">
+
+<!--
 <div id='bar-{{tag}}' class='bar-main-container kinda-green'>
 <div class='row'>
 <div class="col col-xs-1">
 <div class="row">
 <div class="col col-xs-6">
-<div class='afeed-back'> <span class='glyphicon glyphicon-ok' onclick='onClickFeedback(\"{{guid}}\", \"{{tag}}\", \"yes\");' /> </div>
+<div class='afeed-back'> <span class='yes glyphicon glyphicon-ok' onclick='onClickFeedback(this, "{{guid}}", "{{tag}}", "yes");' /> </div>
 </div>
 
 <div class="col col-xs-6">
-<div class='afeed-back'> <span class='glyphicon glyphicon-remove' onclick='onClickFeedback(\"{{guid}}\", \"{{tag}}\", \"no\");' /> </div>
+<div class='afeed-back'> <span class='no glyphicon glyphicon-remove' onclick='onClickFeedback(this, "{{guid}}", "{{tag}}", "no");' /> </div>
 </div>
 </div>
 </div>
@@ -200,72 +189,75 @@
 </div>
 -->
 
-                    </div>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br><br><br>
 
-            <p>
-                <br>
-                <br>
-                <br>
-                <br>
+<!-- Contact Section -->
+<section id="contact" class="container content-section text-center">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h2>Contact Us</h2>
+            <p>Feel free to email us your feedback and suggestions on our service!</p>
+            <p><a href="mailto:feedback@foodai.org">foodaiorg@gmail.org</a>
             </p>
-        </section>
+            <ul class="list-inline banner-social-buttons">
+                <li>
+                    <a href="#" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                </li>
+                <li>
+                    <a href="#" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                </li>
+                <li>
+                    <a href="#" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+                </li>
+                <li>
+                    <a href="#" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="container content-section text-center">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Contact Us</h2>
-                    <p>Feel free to email us to provide some feedback on our service, give us suggestions for new ideas, or to just say hello!</p>
-                    <p><a href="mailto:feedback@foodai.org">foodaiorg@gmail.org</a>
-                    </p>
-                    <ul class="list-inline banner-social-buttons">
-                        <li>
-                            <a href="#" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                        </li>
-                        <li>
-                            <a href="#" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                        </li>
-                        <li>
-                            <a href="#" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
-                        </li>
-                        <li>
-                            <a href="#" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+<!-- Map Section -->
+<!--    <div id="map"></div>-->
 
-        <!-- Map Section -->
-        <!--    <div id="map"></div>-->
+<!-- Footer -->
+<footer>
+    <div class="container text-center">
+        <p>Copyright &copy; SMU SIS DIG Group 2016</p>
+    </div>
+</footer>
 
-        <!-- Footer -->
-        <footer>
-            <div class="container text-center">
-                <p>Copyright &copy; SMU SIS DIG Group 2016</p>
-            </div>
-        </footer>
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
 
-        <!-- jQuery -->
-        <script src="js/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
 
-        <!-- Bootstrap Core JavaScript -->
-        <script src="js/bootstrap.min.js"></script>
+<!-- Plugin JavaScript -->
+<script src="js/jquery.easing.min.js"></script>
 
-        <!-- Plugin JavaScript -->
-        <script src="js/jquery.easing.min.js"></script>
+<!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+<!--    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>-->
 
-        <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-        <!--    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>-->
+<!-- Custom Theme JavaScript -->
+<script src="js/grayscale.js"></script>
 
-        <!-- Custom Theme JavaScript -->
-        <script src="js/grayscale.js"></script>
+<!--    sgfood-->
+<script src="js/sgfood.js"></script>
 
-        <!--    sgfood-->
-        <script src="js/sgfood.js"></script>
-
-    </body>
+</body>
 
 </html>

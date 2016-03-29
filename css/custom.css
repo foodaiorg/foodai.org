@@ -32,8 +32,10 @@
 }
 
 div#image {
+/*
     border-style: solid; border-width: 2px;
     border-color: #42dca3;
+*/
 /*    float:left;*/
     /*width: 416px; height: 416px; line-height: 416px;*/
     width: max-width;
@@ -55,13 +57,6 @@ img.feed-back {
   max-width: 100%;
   max-height: 100%;
 }
-
-.wrap>* .bar{
-  float: left;
-  margin: 6px;
-  padding: 2px;
-}
-
 
 .color-3 {
     background-color: #42dca3;
@@ -94,14 +89,16 @@ img.feed-back {
 .overflow {
     text-overflow: ellipsis;
     white-space: nowrap;
-    margin: 5px;
-    padding: 4px 3px 4px 10px;
+    margin: 10px;
+    margin-top: 8px;
+    padding: 4px 6px 6px 10px;
     text-align: left;
+    font-size: 20px;
 }
 
 #image_url {
     background-color: rgba(0,0,0,0.1);
-    border-color: ;
+    border-color: antiquewhite;
     border-radius: 0px;
     width: 100%;
     color: white;
@@ -109,4 +106,15 @@ img.feed-back {
 #image_url:focus {
     background-color: rgba(0,0,0,0.1);
     border-color: #42dca3;
+}
+#upload-bar {
+    margin: 8px 8px 8px 8px;
+}
+
+.yes:hover {
+    color: green;
+}
+
+.no:hover {
+    color: red;
 }
